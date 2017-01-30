@@ -1,1 +1,1 @@
-# funtions
+# some C funtions
