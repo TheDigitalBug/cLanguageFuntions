@@ -1,4 +1,4 @@
-# Project Name : Some C functions
+# Project Name : Some C functions and programs
 
 # ft_itoa_base.c
 Function that converts an integer value to string using the specified base.
@@ -14,5 +14,16 @@ one. Without doubles.
 $>./inter love folv
 lov
 ```
-# inter.c
+# reverse_bits.c
+Function that takes a byte, reverses it, bit by bit.
 
+```
+237 => 1110 1101
+after reverse
+1101 1110 => 222
+```
+# sort_int_tab.c
+Function sort (in-place) the int array, that contains exactly 'size' elements, in ascending order.
+For always coherent input.
+sort_int_tab_recur - recursive
+sort_int_tab - iterative
