@@ -24,13 +24,6 @@ unsigned char	reverse_bits(unsigned char octet)
 int main ()
 {
 	unsigned char octet;
-	octet = 254;
-
-
-	printf("%d", octet);
-
-	printf("\n");
-	printf("%d", reverse_bits(octet));
-
+	octet = 237;
+	printf("%d %d\n", octet, reverse_bits(octet));
 }
-
