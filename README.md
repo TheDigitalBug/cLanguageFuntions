@@ -10,7 +10,9 @@ With any other base, value is always considered unsigned.
 # inter.c
 Program that takes two strings and displays the characters that appear in both strings, in the order they appear in the first
 one. Without doubles.
-'''
+```
 $>./inter love folv
 lov
-'''
+```
+# inter.c
+
