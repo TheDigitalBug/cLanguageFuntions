@@ -28,7 +28,7 @@ int		ft_base(char tmp)
 	return (j);
 }
 
-void	ft_down_let(char *tmp, const char *str)
+void		ft_down_let(char *tmp, const char *str)
 {
 	int i;
 
@@ -48,14 +48,14 @@ int		ft_atoi_base(const char *str, int str_base)
 	int		i;
 	int		minus;
 	int		nb;
-	char	*tmp;
+	char		*tmp;
 
-	i = 0;
 	minus = 1;
 	nb = 0;
+	i = 0;
 	while (str[i] != '\0')
 		i++;
-	tmp = (char*)malloc(sizeof(*tmp) * i);
+	tmp = (char*)malloc(sizeof(char) * i);
 	ft_down_let(tmp, str);
 	i = 0;
 	while (tmp[i] == ' ' || tmp[i] == '	' || tmp[i] == '\n')
