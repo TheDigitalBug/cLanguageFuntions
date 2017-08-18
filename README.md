@@ -30,7 +30,7 @@ sort_int_tab - iterative
 
 # 5. reverseInteger.c
 Reverse digits of an integer.
-input => x = 123456, return 654321
-input => x = -123456, return -654321
+input => x = 123456, return 654321.
+input => x = -123456, return -654321.
 if reversed integer overflows - return 0.
 
