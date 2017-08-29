@@ -16,7 +16,8 @@ int main(void)
 	long double		long_double_;
 	
 	int				*pointerInt;
-	char				*pointerChar;
+	char			*pointerChar;
+	int				arr[95];
 	
 	
 	printf("Char = int8_t\n");
@@ -57,6 +58,14 @@ int main(void)
 	printf("LDBL_MIN = %LE\n\n", LDBL_MIN);
 	
 	printf("SizeOf pointer int  = %zu byte\n", sizeof(pointerInt));
-	printf("SizeOf pointer char = %zu byte\n", sizeof(pointerChar));
+	printf("SizeOf pointer int  = %zu byte\n", sizeof(int*));
+	printf("SizeOf pointer char = %zu byte\n\n", sizeof(pointerChar));
+	
+	printf("SizeOf pointer void = %zu byte\n", sizeof(void*));
+	printf("SizeOf void = %zu byte\n\n", sizeof(void));
+	
+	printf("SizeOf all int static arr  = %zu byte\n", sizeof(arr));
+	printf("Count elem int static arr  = %zu byte\n\n", sizeof(arr)/sizeof(arr[0]));
+	
 	return 0;
 }
