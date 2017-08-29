@@ -15,6 +15,9 @@ int main(void)
 	double			double_;
 	long double		long_double_;
 	
+	int				*pointerInt;
+	char				*pointerChar;
+	
 	
 	printf("Char = int8_t\n");
 	printf("SizeOf char = %zu byte\n", sizeof(char_));
@@ -52,5 +55,8 @@ int main(void)
 	printf("SizeOf long double = %zu byte\n", sizeof(long_double_));
 	printf("LDBL_MAX = %LE\n", LDBL_MAX);
 	printf("LDBL_MIN = %LE\n\n", LDBL_MIN);
+	
+	printf("SizeOf pointer int  = %zu byte\n", sizeof(pointerInt));
+	printf("SizeOf pointer char = %zu byte\n", sizeof(pointerChar));
 	return 0;
 }
