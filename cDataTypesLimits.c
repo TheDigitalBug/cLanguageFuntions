@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <limits.h>
 #include <float.h>
 
@@ -15,9 +16,11 @@ int main(void)
 	double			double_;
 	long double		long_double_;
 	
-	int				*pointerInt;
-	char			*pointerChar;
+
+	
 	int				arr[95];
+	
+
 
 	
 	printf("Char = int8_t\n");
@@ -56,16 +59,39 @@ int main(void)
 	printf("SizeOf long double = %zu byte\n", sizeof(long_double_));
 	printf("LDBL_MAX = %LE\n", LDBL_MAX);
 	printf("LDBL_MIN = %LE\n\n", LDBL_MIN);
+	printf("---------------------------------\n");
 	
-	printf("SizeOf pointer int  = %zu byte\n", sizeof(pointerInt));
-	printf("SizeOf pointer int  = %zu byte\n", sizeof(int*));
-	printf("SizeOf pointer char = %zu byte\n\n", sizeof(pointerChar));
+	int				*pointerInt;
+	printf("sizeof(int*)  = %zu byte\n", sizeof(int*));
+	printf("sizeof(pointerInt)  = %zu byte\n", sizeof(pointerInt));
+	printf("&int_  = %zu byte\n", sizeof(&int_));
+	printf("&int_  = %p\n", &int_);
+	printf("sizeof(0x7ffeece33984)  = %zu byte\n", sizeof(0x7ffeece33984));
 	
-	printf("SizeOf pointer void = %zu byte\n", sizeof(void*));
-	printf("SizeOf void = %zu byte\n\n", sizeof(void));
+	printf("sizeof(*pointerInt)  = %zu byte\n\n", sizeof(*pointerInt));
 	
-	printf("SizeOf all int static arr  = %zu byte\n", sizeof(arr));
-	printf("Count elem int static arr  = %zu byte\n\n", sizeof(arr)/sizeof(arr[0]));
+	char			*pointerChar;
+	printf("sizeof(char*)  = %zu byte\n", sizeof(char*));
+	printf("sizeof(pointerChar)  = %zu byte\n", sizeof(pointerChar));
+	printf("sizeof(*pointerChar)  = %zu byte\n\n", sizeof(*pointerChar));
+	
+	char			*pointerVoid;
+	printf("sizeof(void*)  = %zu byte\n", sizeof(void*));
+	printf("sizeof(pointerVoid)  = %zu byte\n", sizeof(pointerVoid));
+	printf("sizeof(*pointerVoid)  = %zu byte\n\n", sizeof(*pointerVoid));
+	
+	printf("---------------------------------\n");
+
+	
+	printf("sizeof(arr)  = %zu byte\n", sizeof(arr));
+	printf("sizeof(arr)/sizeof(arr[0])  = %zu byte\n\n", sizeof(arr)/sizeof(arr[0]));
+
+	int				*arrMalloc;
+	arrMalloc = (int*)malloc(sizeof(int) * 117);
+	
+	printf("sizeof(*arrMalloc)  = %zu byte\n", sizeof(*arrMalloc));
+	printf("sizeof(arrMalloc)  = %zu byte\n", sizeof(arrMalloc));
+	printf("sizeof(arrMalloc)/sizeof(arr[0])  = %zu byte\n\n", sizeof(arrMalloc)/sizeof(arr[0]));
 
 	return 0;
 }
