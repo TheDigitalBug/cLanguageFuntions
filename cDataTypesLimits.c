@@ -18,7 +18,7 @@ int main(void)
 	int				*pointerInt;
 	char			*pointerChar;
 	int				arr[95];
-	
+
 	
 	printf("Char = int8_t\n");
 	printf("SizeOf char = %zu byte\n", sizeof(char_));
@@ -66,6 +66,6 @@ int main(void)
 	
 	printf("SizeOf all int static arr  = %zu byte\n", sizeof(arr));
 	printf("Count elem int static arr  = %zu byte\n\n", sizeof(arr)/sizeof(arr[0]));
-	
+
 	return 0;
 }
