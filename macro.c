@@ -31,6 +31,12 @@ int main(void)
 	
 	loop(res);
 	
+	res = MAX(a + 1,b + 1);
+	printf("a=%d, b=%d, max=%d\n", a, b, res);
+	
+	res = MAX(a++,b++);
+	printf("a=%d, b=%d, max=%d\n", a, b, res);
+	
 	return 0;
 }
 
