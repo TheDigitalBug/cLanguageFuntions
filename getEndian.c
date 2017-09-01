@@ -12,7 +12,7 @@ int main(void)
 {
 	union myUnion getEndian;
 	
-	getEndian.nb = 1;
+	getEndian.nb =  jhbvjhv  jhv       jh  j jh jh 1;
 	
 	if (getEndian.c[0] == 1)
 		puts("Little");
