@@ -3,7 +3,7 @@
 #define prd(nb) printf(#nb "=%d\n", nb);
 #define prs(str) printf(#str "=%s\n", str);
 
-#define cat(str1, str2)  str1 ## str2
+#define catz(x, y) x ## y
 
 
 void func(int arr[10])
@@ -26,6 +26,14 @@ int main (void)
 
 	prd(a/b);
 	prs("Hello world!");
+	
+	char *str = "help ";
+	char *str2 = "me";
+
+	puts(str);
+
+	str = catz(str, 2);
+	puts(str);
 
 	
 	
