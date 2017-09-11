@@ -8,6 +8,13 @@ struct structOne
 	int c;
 };
 
+struct structOneSetSize
+{
+	int a:16;
+	short b:16;
+	int c:1;
+};
+
 struct structTwo
 {
 	long a;
@@ -41,6 +48,7 @@ int main(void)
 
 
 	struct structOne one;
+	struct structOneSetSize oneSetSize;
 	struct structTwo two;
 	struct structThree three;
 	struct structFour four;
@@ -53,6 +61,7 @@ int main(void)
 	
 	
 	printf("%lu\n", sizeof(one));
+	printf("%lu\n", sizeof(oneSetSize));
 	printf("%lu\n", sizeof(two));
 	printf("%lu\n", sizeof(three));
 	printf("%lu\n", sizeof(four));
