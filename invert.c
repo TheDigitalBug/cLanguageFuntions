@@ -3,22 +3,22 @@
 
 int	invert(int x, int p, int n)
 {
-	int i;
-	unsigned int mask = 1;
+	int mask = 1;
+	int i = 0;
 	
-	for (i = 1; i != n; i++)
+	while(i < p)
 	{
-		mask = (mask << 1) + 1;
+		mask = mask << 1;
+		if (i < n)
+			mask += 1;
+		i++;
 	}
-	
-	mask = mask << (p - n);
-	
 	return (x ^ mask);
 }
 
 int main(void)
 {
-	int x = 123;
+	int x = 471;
 
 	printf("x=%d inv=%d", x, 	invert(x, 5, 3));
 	return (0);
