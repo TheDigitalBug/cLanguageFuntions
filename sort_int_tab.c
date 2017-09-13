@@ -13,13 +13,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void	sort_int_tab(int *tab, unsigned int size)
+void	sort_int_tab(int tab[], unsigned int size)
 {
 	int				tmp;
 	unsigned int	i;
 
 	i = 0;
-	while (i < size)
+	while (i < size - 1)
 	{
 		if (tab[i] > tab[i + 1])
 		{
@@ -32,13 +32,13 @@ void	sort_int_tab(int *tab, unsigned int size)
 	}
 }
 
-void	sort_int_tab_recur(int *tab, unsigned int size)
+void	sort_int_tab_recur(int tab[], unsigned int size)
 {
 	int				tmp;
 	unsigned int	i;
 
 	i = 0;
-	while (i < size)
+	while (i < size - 1)
 	{
 		if (tab[i] > tab[i + 1])
 		{
@@ -54,23 +54,16 @@ void	sort_int_tab_recur(int *tab, unsigned int size)
 int		main(void)
 {
 	int i;
-	int size;
-	int *mass;
 
-	mass = (int*)malloc(sizeof(*mass) * 7);
-	mass[0] = 1;
-	mass[1] = 4;
-	mass[2] = 6;
-	mass[3] = 8;
-	mass[4] = 2;
-	mass[5] = 4;
-	mass[6] = 0;
-	i = 0;
-	size = 7;
+	int mass[] = {9,6, 2, 12, 11, 9, 3, 7};
+	int size = sizeof(mass) / sizeof(mass[0]);
+	
 	sort_int_tab(mass, size);
+	
 	while (i < size)
 		printf("%d ", mass[i++]);
 	printf("\n");
+	
 	i = 0;
 	sort_int_tab_recur(mass, size);
 	while (i < size)
